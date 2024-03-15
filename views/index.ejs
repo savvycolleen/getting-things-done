@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('partials/header') -%>
+    <title>Getting Things Done</title>
+
 </head>
 <body>
-    <h1>Create Your VERY OWN Todolist!</h1>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
+
+<div class="container-fluid p-5 bg-dark text-white text-center">
+  <h1 class="display-1">Getting Things Done</h1>
+  <p>A To-Do List for Everyone</p> 
+</div>
+
+
+<div class="container-fluid mt-5 px-5">
+  <div class="row">
+    <div class="mx-auto col-lg-3 col-md-4 mb-3 text-start">
+      <h3>Been Here Before?</h3>
+      <p>We're so glad you're back! Login to see what's waiting for you.</p>
+      <a class="btn btn-primary btn-lg" href="/login">Login</a>
+    </div>
+    <div class="mx-auto col-lg-3 col-md-4 text-start">
+      <h3>First Time Here?</h3>
+      <p>No worries! Click below to sign up.</p>
+      <a class="btn btn-primary btn-lg" href="/signup">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+    <%- include('partials/footer') -%>
+    
 </body>
 </html>
+

@@ -25,7 +25,7 @@ const User = require('../models/User')
     passport.authenticate('local', (err, user, info) => {
       if (err) { return next(err) }
       if (!user) {
-        req.flash('errors', info)
+        req.flash('errors', { msg: 'This account does not exist. Please sign up.' })
         return res.redirect('/login')
       }
       req.logIn(user, (err) => {
@@ -80,8 +80,8 @@ const User = require('../models/User')
     ]}, (err, existingUser) => {
       if (err) { return next(err) }
       if (existingUser) {
-        req.flash('errors', { msg: 'Account with that email address or username already exists.' })
-        return res.redirect('../signup')
+        req.flash('errors', { msg: 'Account with that email address or username already exists. Try logging in.' })
+        return res.redirect('/signup')
       }
       user.save((err) => {
         if (err) { return next(err) }

@@ -37,9 +37,13 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
+
   
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
+
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
