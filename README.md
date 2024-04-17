@@ -16,11 +16,6 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
-## Optimizations
-Adding a toggle setting for color themes (light/dark mode), making multiple to-do lists per user. 
-
----
-
 ## Lessons Learned:
 
 Even if you are trying something brand new, the best way to learn is to build, build, build!
